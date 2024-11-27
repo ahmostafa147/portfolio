@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route, Link, useLocation } from 'react-router-dom';
+import { HashRouter, Routes, Route, Link, useLocation } from 'react-router-dom';
 import { Github, Linkedin, Mail, Menu, X } from 'lucide-react';
 import profileImg from './assets/images/ahmed.png'
 import sepsis from './assets/images/sepsis.png'
@@ -201,26 +201,26 @@ const About = () => (
               </div>
             </div>
             <div className="bg-gray-50 rounded-xl p-6 mt-8">
-            <h3 className="font-bold mb-6">Technical Expertise</h3>
-            <div className="grid grid-cols-2 gap-x-8">
-              {/* Programming Skills */}
-              <div>
-                <h4 className="font-semibold mb-4">Programming</h4>
-                {skills.map((skill) => (
-                  <SkillBar key={skill.name} skill={skill.name} level={skill.level} />
-                ))}
-              </div>
-              {/* Technologies */}
-              <div>
-                <h4 className="font-semibold mb-4">Technologies</h4>
-                {technologies.map((tech) => (
-                  <TechRating key={tech.name} tech={tech.name} rating={tech.rating} />
-                ))}
+              <h3 className="font-bold mb-6">Technical Expertise</h3>
+              <div className="grid grid-cols-2 gap-x-8">
+                {/* Programming Skills */}
+                <div>
+                  <h4 className="font-semibold mb-4">Programming</h4>
+                  {skills.map((skill) => (
+                    <SkillBar key={skill.name} skill={skill.name} level={skill.level} />
+                  ))}
+                </div>
+                {/* Technologies */}
+                <div>
+                  <h4 className="font-semibold mb-4">Technologies</h4>
+                  {technologies.map((tech) => (
+                    <TechRating key={tech.name} tech={tech.name} rating={tech.rating} />
+                  ))}
+                </div>
               </div>
             </div>
           </div>
-          </div>
-          
+
           {/* Column 2: Skills & Education */}
           <div className="space-y-8">
             <div className="bg-gray-50 rounded-xl p-6">
@@ -457,20 +457,20 @@ const Projects = () => {
   ];
   return (
     <PageTransition>
-     <div className="min-h-screen pt-16 bg-gray-50">
-       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-         <h2 className="text-3xl font-bold mb-12">Projects</h2>
-         <div className="flex flex-wrap justify-center gap-8">
-           {projects.map((project, index) => (
-             <div className="w-full md:w-[calc(32.33%-1rem)]">
-               <ProjectCard key={index} {...project} />
-             </div>
-           ))}
-         </div>
-       </div>
-     </div>
-   </PageTransition>
- );
+      <div className="min-h-screen pt-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+          <h2 className="text-3xl font-bold mb-12">Projects</h2>
+          <div className="flex flex-wrap justify-center gap-8">
+            {projects.map((project, index) => (
+              <div className="w-full md:w-[calc(32.33%-1rem)]">
+                <ProjectCard key={index} {...project} />
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </PageTransition>
+  );
 };
 
 const Contact = () => (
@@ -526,9 +526,9 @@ const Footer = () => (
 // App.jsx
 const App = () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <AppContent />
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
