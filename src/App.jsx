@@ -285,23 +285,27 @@ const Resume = () => (
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <h2 className="text-3xl font-bold mb-8">Resume</h2>
         <div className="bg-white rounded-lg shadow-lg p-6">
-          <iframe
-            src={ResumePDF}
-            className="w-full h-[800px]"
-            title="Resume"
-          />
-          <a
-            href={ResumePDF}
-            download
-            className="mt-4 inline-block px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
+          <object
+            data={ResumePDF}
+            type="application/pdf"
+            className="w-full h-screen"
           >
-            Download Resume
-          </a>
+            <div>
+              <p>Your browser doesn't support PDF viewing.</p>
+              <a 
+                href={ResumePDF}
+                download
+                className="mt-4 inline-block px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
+              >
+                Download Resume
+              </a>
+            </div>
+          </object>
         </div>
       </div>
     </div>
   </PageTransition>
-);
+ );
 
 // Add Tutoring component
 const TeachingCard = ({ course, students, termCount, terms, responsibilities }) => (
