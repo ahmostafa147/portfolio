@@ -54,6 +54,8 @@ const Navigation = () => {
             <Link to="/" className="block px-3 py-2 text-gray-600 hover:text-blue-600">Home</Link>
             <Link to="/about" className="block px-3 py-2 text-gray-600 hover:text-blue-600">About</Link>
             <Link to="/projects" className="block px-3 py-2 text-gray-600 hover:text-blue-600">Projects</Link>
+            <Link to="/resume" className="block px-3 py-2 text-gray-600 hover:text-blue-600">Resume</Link>
+            <Link to="/tutoring" className="block px-3 py-2 text-gray-600 hover:text-blue-600">Teaching</Link>
             <Link to="/contact" className="block px-3 py-2 text-gray-600 hover:text-blue-600">Contact</Link>
           </div>
         </div>
