@@ -280,157 +280,157 @@ const PageTransition = ({ children }) => (
 
 // Add Resume component
 const Resume = () => (
-  <PageTransition>
-    <div className="min-h-screen pt-16 bg-white">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="flex justify-between items-center mb-8">
-          <h2 className="text-3xl font-bold">Resume</h2>
-          <a href={ResumePDF} download className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition">
-            Download PDF
-          </a>
-        </div>
-        
-        <div className="space-y-12">
-          {/* Header */}
-          <div className="text-center border-b pb-6">
-            <h1 className="text-3xl font-bold mb-2">Ahmed Mostafa</h1>
-            <p className="text-gray-600">3525 Lebon Dr, San Diego, CA, United States</p>
-            <div className="flex justify-center gap-4 mt-2">
-              <a href="mailto:amostafa.mail@gmail.com" className="text-blue-600 hover:underline">amostafa.mail@gmail.com</a>
-              <span>|</span>
-              <a href="https://linkedin.com/in/ahmed-mostafa147" className="text-blue-600 hover:underline">linkedin.com/in/ahmed-mostafa147</a>
-              <span>|</span>
-              <a href="https://github.com/ahmostafa147" className="text-blue-600 hover:underline">github.com/ahmostafa147</a>
-            </div>
-          </div>
- 
-          {/* Education */}
-          <div>
-            <h2 className="text-2xl font-bold mb-4">Education</h2>
-            <div className="flex justify-between mb-2">
-              <div>
-                <h3 className="font-bold">University of California, San Diego</h3>
-                <p>B.S. in Data Science, Minor in Mathematics</p>
-                <p className="text-gray-600 text-sm mt-1">Relevant Coursework: Data Structures & Algorithms, Design & Analysis of Algorithms, Probabilistic Modeling and ML, Data Management, Graph Theory, Probability & Statistics, Representation Learning, Systems for Scalable Analytics, Recommender Sys & Web Mining, Numerical Analysis</p>
-              </div>
-              <div className="text-right shrink-0">
-                <p>Sep. 2022 - March 2025</p>
-                <p className="text-blue-600">GPA: 4.0/4.0</p>
-              </div>
-            </div>
-          </div>
- 
-          {/* Experience */}
-          <div>
-            <h2 className="text-2xl font-bold mb-4">Experience</h2>
-            <div className="space-y-8">
-              <div>
-                <div className="flex justify-between mb-2">
-                  <h3 className="font-bold">Machine Learning Intern</h3>
-                  <p>June 2024 – Sep. 2024</p>
-                </div>
-                <p className="italic mb-2">CarsXE, Highland, MD</p>
-                <ul className="list-disc pl-5 space-y-1">
-                  <li>Deployed regression car valuation model aiding customer assessment of vehicle prices, using Streamlit and Sklearn</li>
-                  <li>Developed automated pipelines integrating VehicleSpecs and MarketValue APIs, streamlining data for model training</li>
-                  <li>Performed exploratory data analysis using Seaborn and Pandas, reducing feature space and memory usage by 54%</li>
-                </ul>
-              </div>
- 
-              <div>
-                <div className="flex justify-between mb-2">
-                  <h3 className="font-bold">Data Science Intern</h3>
-                  <p>June 2023 – Sep. 2023</p>
-                </div>
-                <p className="italic mb-2">CarsXE, Highland, MD</p>
-                <ul className="list-disc pl-5 space-y-1">
-                  <li>Implemented a user monitoring system, identifying key growth opportunities in data-driven strategies and user engagement</li>
-                  <li>Analyzed API data to improve data reliability, resolving invalidity and nullness through consistency validation</li>
-                  <li>Optimized dashboard runtime by caching dynamic queries to static calls, reducing wait times from minutes to seconds</li>
-                </ul>
-              </div>
- 
-              <div>
-                <div className="flex justify-between mb-2">
-                  <h3 className="font-bold">Instructional Assistant</h3>
-                  <p>Sep. 2023 – Present</p>
-                </div>
-                <p className="italic mb-2">UC San Diego – Halicioglu Data Science Institute</p>
-                <ul className="list-disc pl-5 space-y-1">
-                  <li>Tutored over 550 students, improving comprehension over data science through office hours and discussion sessions</li>
-                  <li>Solicited feedback from students to enhance tutoring and discussion sections, increasing exam scores by 30%</li>
-                  <li>Created and graded homework assignments, exams, and projects, providing constructive feedback</li>
-                </ul>
-              </div>
-            </div>
-          </div>
- 
-          {/* Projects */}
-          <div>
-            <h2 className="text-2xl font-bold mb-4">Projects</h2>
-            <div className="space-y-6">
-              <div>
-                <div className="flex justify-between mb-2">
-                  <h3 className="font-bold">Sepsis Clustering in ICU Patients</h3>
-                  <p className="text-gray-600">R, PostgreSQL, Docker, Git</p>
-                </div>
-                <ul className="list-disc pl-5 space-y-1">
-                  <li>Replicated research paper findings on multimorbidity & sepsis in ICU patients, analyzing 36,000+ EHRs of MIMIC-III dataset</li>
-                  <li>Applied latent class analysis to identify distinct patient subgroups, connecting different risks for organ dysfunction and sepsis</li>
-                  <li>Documented reproducibility processes in GitHub, ensuring robust tracking of methodologies</li>
-                </ul>
-              </div>
- 
-              <div>
-                <div className="flex justify-between mb-2">
-                  <h3 className="font-bold">League of Legends Analysis</h3>
-                  <p className="text-gray-600">Python, Pandas, Statistical Analysis</p>
-                </div>
-                <ul className="list-disc pl-5 space-y-1">
-                  <li>Analyzed 5,000+ professional League of Legends games, showing impact of player kills in different positions on win rates</li>
-                  <li>Cleaned and prepared dataset featuring detailed match statistics such as kills, positions, and game results</li>
-                  <li>Conducted hypothesis testing to explore the relationship between kills and win rates</li>
-                </ul>
-              </div>
- 
-              <div>
-                <div className="flex justify-between mb-2">
-                  <h3 className="font-bold">NBA Trends Teller</h3>
-                  <p className="text-gray-600">Svelte, CSS, HTML, D3.js</p>
-                </div>
-                <ul className="list-disc pl-5 space-y-1">
-                  <li>Developed an interactive data visualization project using Svelte and D3.js to analyze NBA scoring trends</li>
-                  <li>Utilized D3.js to create dynamic charts, showcasing historical NBA data to evaluate changes in game strategies</li>
-                  <li>Designed responsive UI components with Svelte and CSS for an engaging user experience</li>
-                </ul>
-              </div>
-            </div>
-          </div>
- 
-          {/* Skills */}
-          <div>
-            <h2 className="text-2xl font-bold mb-4">Technical Skills</h2>
-            <div className="grid grid-cols-1 gap-4">
-              <div>
-                <h3 className="font-bold mb-2">Technical:</h3>
-                <p>Python, Firebase, SQL, Java, Javascript, AWS, Spark, Dask, Git, Jira, Streamlit, Tableau, Svelte, D3.js, Docker, Keras</p>
-              </div>
-              <div>
-                <h3 className="font-bold mb-2">Product:</h3>
-                <p>Agile Methodology, Continuous Discovery, Critical Thinking, Growth, Problem-Solving, GitHub Actions CI</p>
-              </div>
-              <div>
-                <h3 className="font-bold mb-2">Business:</h3>
-                <p>Data Analysis, Market Analysis, Organizational Leadership, Project Management, Strategy</p>
-              </div>
-            </div>
-          </div>
- 
-        </div>
-      </div>
-    </div>
-  </PageTransition>
- );
+ <PageTransition>
+   <div className="min-h-screen pt-16 bg-white">
+     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+       <div className="flex justify-between items-center mb-8">
+         <h2 className="text-3xl font-bold">Resume</h2>
+         <a href={ResumePDF} download className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition">
+           Download PDF
+         </a>
+       </div>
+       
+       <div className="space-y-12">
+         {/* Header */}
+         <div className="text-center border-b pb-6">
+           <h1 className="text-3xl font-bold mb-2">Ahmed Mostafa</h1>
+           <p className="text-gray-600">3525 Lebon Dr, San Diego, CA, United States</p>
+           <div className="flex justify-center gap-4 mt-2">
+             <a href="mailto:amostafa.mail@gmail.com" className="text-blue-600 hover:underline">amostafa.mail@gmail.com</a>
+             <span>|</span>
+             <a href="https://linkedin.com/in/ahmed-mostafa147" className="text-blue-600 hover:underline">linkedin.com/in/ahmed-mostafa147</a>
+             <span>|</span>
+             <a href="https://github.com/ahmostafa147" className="text-blue-600 hover:underline">github.com/ahmostafa147</a>
+           </div>
+         </div>
+
+         {/* Education */}
+         <div>
+           <h2 className="text-2xl font-bold mb-4">Education</h2>
+           <div className="flex justify-between mb-2">
+             <div>
+               <h3 className="font-bold">University of California, San Diego</h3>
+               <p>B.S. in Data Science, Minor in Mathematics</p>
+               <p className="text-gray-600 text-sm mt-1">Relevant Coursework: Data Structures & Algorithms, Design & Analysis of Algorithms, Probabilistic Modeling and ML, Data Management, Graph Theory, Probability & Statistics, Representation Learning, Systems for Scalable Analytics, Recommender Sys & Web Mining, Numerical Analysis</p>
+             </div>
+             <div className="text-right shrink-0">
+               <p>Sep. 2022 - March 2025</p>
+               <p className="text-blue-600">GPA: 4.0/4.0</p>
+             </div>
+           </div>
+         </div>
+
+         {/* Experience */}
+         <div>
+           <h2 className="text-2xl font-bold mb-4">Experience</h2>
+           <div className="space-y-8">
+             <div>
+               <div className="flex justify-between mb-2">
+                 <h3 className="font-bold">Machine Learning Intern</h3>
+                 <p>June 2024 – Sep. 2024</p>
+               </div>
+               <p className="italic mb-2">CarsXE, Highland, MD</p>
+               <ul className="list-disc pl-5 space-y-1">
+                 <li>Deployed regression car valuation model aiding customer assessment of vehicle prices, using Streamlit and Sklearn</li>
+                 <li>Developed automated pipelines integrating VehicleSpecs and MarketValue APIs, streamlining data for model training</li>
+                 <li>Performed exploratory data analysis using Seaborn and Pandas, reducing feature space and memory usage by 54%</li>
+               </ul>
+             </div>
+
+             <div>
+               <div className="flex justify-between mb-2">
+                 <h3 className="font-bold">Data Science Intern</h3>
+                 <p>June 2023 – Sep. 2023</p>
+               </div>
+               <p className="italic mb-2">CarsXE, Highland, MD</p>
+               <ul className="list-disc pl-5 space-y-1">
+                 <li>Implemented a user monitoring system, identifying key growth opportunities in data-driven strategies and user engagement</li>
+                 <li>Analyzed API data to improve data reliability, resolving invalidity and nullness through consistency validation</li>
+                 <li>Optimized dashboard runtime by caching dynamic queries to static calls, reducing wait times from minutes to seconds</li>
+               </ul>
+             </div>
+
+             <div>
+               <div className="flex justify-between mb-2">
+                 <h3 className="font-bold">Instructional Assistant</h3>
+                 <p>Sep. 2023 – Present</p>
+               </div>
+               <p className="italic mb-2">UC San Diego – Halicioglu Data Science Institute</p>
+               <ul className="list-disc pl-5 space-y-1">
+                 <li>Tutored over 550 students, improving comprehension over data science through office hours and discussion sessions</li>
+                 <li>Solicited feedback from students to enhance tutoring and discussion sections, increasing exam scores by 30%</li>
+                 <li>Created and graded homework assignments, exams, and projects, providing constructive feedback</li>
+               </ul>
+             </div>
+           </div>
+         </div>
+
+         {/* Projects */}
+         <div>
+           <h2 className="text-2xl font-bold mb-4">Projects</h2>
+           <div className="space-y-6">
+             <div>
+               <div className="flex justify-between mb-2">
+                 <h3 className="font-bold">Sepsis Clustering in ICU Patients</h3>
+                 <p className="text-gray-600">R, PostgreSQL, Docker, Git</p>
+               </div>
+               <ul className="list-disc pl-5 space-y-1">
+                 <li>Replicated research paper findings on multimorbidity & sepsis in ICU patients, analyzing 36,000+ EHRs of MIMIC-III dataset</li>
+                 <li>Applied latent class analysis to identify distinct patient subgroups, connecting different risks for organ dysfunction and sepsis</li>
+                 <li>Documented reproducibility processes in GitHub, ensuring robust tracking of methodologies</li>
+               </ul>
+             </div>
+
+             <div>
+               <div className="flex justify-between mb-2">
+                 <h3 className="font-bold">League of Legends Analysis</h3>
+                 <p className="text-gray-600">Python, Pandas, Statistical Analysis</p>
+               </div>
+               <ul className="list-disc pl-5 space-y-1">
+                 <li>Analyzed 5,000+ professional League of Legends games, showing impact of player kills in different positions on win rates</li>
+                 <li>Cleaned and prepared dataset featuring detailed match statistics such as kills, positions, and game results</li>
+                 <li>Conducted hypothesis testing to explore the relationship between kills and win rates</li>
+               </ul>
+             </div>
+
+             <div>
+               <div className="flex justify-between mb-2">
+                 <h3 className="font-bold">NBA Trends Teller</h3>
+                 <p className="text-gray-600">Svelte, CSS, HTML, D3.js</p>
+               </div>
+               <ul className="list-disc pl-5 space-y-1">
+                 <li>Developed an interactive data visualization project using Svelte and D3.js to analyze NBA scoring trends</li>
+                 <li>Utilized D3.js to create dynamic charts, showcasing historical NBA data to evaluate changes in game strategies</li>
+                 <li>Designed responsive UI components with Svelte and CSS for an engaging user experience</li>
+               </ul>
+             </div>
+           </div>
+         </div>
+
+         {/* Skills */}
+         <div>
+           <h2 className="text-2xl font-bold mb-4">Technical Skills</h2>
+           <div className="grid grid-cols-1 gap-4">
+             <div>
+               <h3 className="font-bold mb-2">Technical:</h3>
+               <p>Python, Firebase, SQL, Java, Javascript, AWS, Spark, Dask, Git, Jira, Streamlit, Tableau, Svelte, D3.js, Docker, Keras</p>
+             </div>
+             <div>
+               <h3 className="font-bold mb-2">Product:</h3>
+               <p>Agile Methodology, Continuous Discovery, Critical Thinking, Growth, Problem-Solving, GitHub Actions CI</p>
+             </div>
+             <div>
+               <h3 className="font-bold mb-2">Business:</h3>
+               <p>Data Analysis, Market Analysis, Organizational Leadership, Project Management, Strategy</p>
+             </div>
+           </div>
+         </div>
+
+       </div>
+     </div>
+   </div>
+ </PageTransition>
+);
 
 // Add Tutoring component
 const TeachingCard = ({ course, students, termCount, terms, responsibilities }) => (
