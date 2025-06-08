@@ -873,7 +873,7 @@ const AcademicHistory = () => {
     },
     {
       title: "Harvard & UCSD Masters",
-      description: "Received acceptance letters from Harvard University for their Master's in Data Science program and UCSD for their Master's in Computer Science program.",
+      description: "Received acceptance letters from Harvard University for their Master's in Computational Science and Engineering program and UCSD for their Master's in Computer Science program.",
       icon: <BookOpen className="w-8 h-8 text-green-500" />,
     },
   ];
