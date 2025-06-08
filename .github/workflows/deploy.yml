@@ -29,7 +29,10 @@ jobs:
       
       - name: Install dependencies
         run: npm ci
-      
+        
+      - name: Update Browser List
+        run: npx update-browserslist-db@latest
+        
       - name: Build with Next.js
         run: npm run build
       
