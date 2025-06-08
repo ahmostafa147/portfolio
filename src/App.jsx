@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { HashRouter, Routes, Route, Link, useLocation, useNavigate } from 'react-router-dom';
-import { Github, Linkedin, Mail, Menu, X, Moon, Sun, Award, GraduationCap, BookOpen, User, Code2, Briefcase, MapPin, ExternalLink, FileText } from 'lucide-react';
+import { Github, Linkedin, Mail, Menu, X, Moon, Sun, Award, GraduationCap, BookOpen } from 'lucide-react';
 import profileImg from './assets/images/ahmed.png'
 import sepsis from './assets/images/sepsis.png'
 import nba from './assets/images/nba.png'
@@ -11,7 +11,6 @@ import solarflair from './assets/images/solarflair.png'
 import sepsis_detection from './assets/images/sepsis_detection.png'
 import { motion, AnimatePresence } from 'framer-motion';
 import ResumePDF from './assets/Ahmed_ML_Resume.pdf';
-import british from './assets/images/British_Airways-Logo.png';
 
 // Theme context for dark mode (default to dark)
 const ThemeContext = React.createContext();
@@ -114,13 +113,6 @@ const Navigation = () => {
   );
 };
 
-const StatCard = ({ title, value, description }) => (
-  <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 shadow-lg">
-    <h3 className="font-bold text-4xl text-blue-600 dark:text-blue-400 mb-2">{value}</h3>
-    <p className="font-semibold mb-1 text-gray-900 dark:text-white">{title}</p>
-    <p className="text-gray-600 dark:text-gray-300 text-sm">{description}</p>
-  </div>
-);
 
 const ContactItem = ({ icon, title, value, link }) => (
   <a href={link} className="flex items-center p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm hover:shadow-md transition">
@@ -165,7 +157,6 @@ const TypewriterText = ({ text, delay = 0, speed = 100 }) => {
 
 // Updated Home component - replace the existing Home component with this:
 const Home = () => {
-  const { isDark } = React.useContext(ThemeContext);
   const navigate = useNavigate();
 
   return (
@@ -184,12 +175,16 @@ const Home = () => {
                 transition={{ duration: 0.5 }}
               >
                 <h1 className="text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400 font-mono">
-                  Ahmed Mostafa
+                <TypewriterText 
+                    text="Hi 👋! This is Ahmed Mostafa" 
+                    delay={1000} 
+                    speed={66} 
+                  />
                 </h1>
                 <p className="text-2xl text-gray-600 dark:text-gray-300 mb-8 font-mono min-h-[2.5rem]">
                   <TypewriterText 
                     text="Data Scientist & Machine Learning Engineer" 
-                    delay={1000} 
+                    delay={2850} 
                     speed={66} 
                   />
                 </p>
@@ -293,52 +288,6 @@ const Home = () => {
     </PageTransition>
   );
 };
-
-const TechRating = ({ tech, rating }) => (
-  <div className="mb-4">
-    <div className="flex items-center justify-between mb-1">
-      <span className="font-medium text-gray-900 dark:text-white">{tech}</span>
-      <div className="flex gap-1">
-        {[...Array(5)].map((_, i) => (
-          <div
-            key={i}
-            className={`w-4 h-4 rounded-full ${i < rating ? 'bg-blue-600 dark:bg-blue-400' : 'bg-gray-200 dark:bg-gray-600'}`}
-          />
-        ))}
-      </div>
-    </div>
-  </div>
-);
-
-const technologies = [
-  { name: "AWS", rating: 3 },
-  { name: "Docker", rating: 4 },
-  { name: "Git", rating: 5 },
-  { name: "Spark", rating: 3 },
-];
-
-const SkillBar = ({ skill, level }) => (
-  <div className="mb-4">
-    <div className="flex justify-between mb-1">
-      <span className="font-medium text-gray-900 dark:text-white">{skill}</span>
-      <span className="text-gray-500 dark:text-gray-400">{level}%</span>
-    </div>
-    <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-      <div
-        className="bg-blue-600 dark:bg-blue-400 h-2 rounded-full transition-all duration-500"
-        style={{ width: `${level}%` }}
-      />
-    </div>
-  </div>
-);
-
-const skills = [
-  { name: "Python", level: 95 },
-  { name: "SQL", level: 90 },
-  { name: "R", level: 50 },
-  { name: "Java", level: 90 },
-  { name: "JavaScript", level: 65 }
-];
 
 const About = () => (
   <PageTransition>
@@ -1122,7 +1071,6 @@ const TestimonialCard = ({ quote, author, role, course, delay = 0 }) => (
 );
 
 const AppContent = () => {
-  const location = useLocation();
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-200">
       <Navigation />
