@@ -460,7 +460,7 @@ const HomeSection = () => {
             >
               <h1 className="text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400 font-mono">
               <TypewriterText 
-                  text="Hi 👋! This is Ahmed Mostafa" 
+                  text="Hi 👋! I'm Ahmed Mostafa" 
                   delay={1000} 
                   speed={66} 
                 />
