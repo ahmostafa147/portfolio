@@ -434,7 +434,6 @@ const TypewriterText = ({ text, delay = 0, speed = 100 }) => {
 };
 
 const HomeSection = () => {
-  const { isDark } = React.useContext(ThemeContext);
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
