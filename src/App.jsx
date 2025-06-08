@@ -1402,6 +1402,182 @@ const TeachingCard = ({ course, students, termCount, terms, responsibilities }) 
   </motion.div>
 );
 
+<<<<<<< HEAD
+=======
+const AcademicHistory = () => {
+  const achievements = [
+    {
+      title: "Jeffrey L. Elman Award",
+      description: "Selected as the one student out of 200+ graduating students to receive this prestigious award for outstanding academic achievement and research contributions in Data Science.",
+      icon: <Award className="w-8 h-8 text-yellow-500" />,
+    },
+    {
+      title: "UC Berkeley MEng EECS",
+      description: "Accepted into UC Berkeley's Master of Engineering program in Electrical Engineering and Computer Science, focusing on Data Science and Machine Learning.",
+      icon: <GraduationCap className="w-8 h-8 text-blue-500" />,
+    },
+    {
+      title: "Harvard & UCSD Masters",
+      description: "Received acceptance letters from Harvard University for their Master's in Computational Science and Engineering program and UCSD for their Master's in Computer Science program.",
+      icon: <BookOpen className="w-8 h-8 text-green-500" />,
+    },
+  ];
+
+  const departmentCourses = {
+    "Data Science": {
+      color: "bg-blue-500",
+      courses: [
+        { code: "DSC 10", name: "Principles of Data Science", grade: "A" },
+        { code: "DSC 20", name: "Programming and Basic Data Structures", grade: "A+" },
+        { code: "DSC 30", name: "Data Structures and Algorithms", grade: "A" },
+        { code: "DSC 40A", name: "Theoretical Foundations of Data Science I", grade: "A" },
+        { code: "DSC 40B", name: "Theoretical Foundations of Data Science II", grade: "A" },
+        { code: "DSC 80", name: "Practice of Data Science", grade: "A" },
+        { code: "DSC 95", name: "Tutor Apprenticeship in Data Science", grade: "P" },
+        { code: "DSC 96", name: "Workshop in Data Science", grade: "P" },
+        { code: "DSC 100", name: "Introduction to Data Management", grade: "A" },
+        { code: "DSC 102", name: "Systems for Scalable Analytics", grade: "A" },
+        { code: "DSC 106", name: "Introduction to Data Visualization", grade: "A" },
+        { code: "DSC 140A", name: "Probabilistic Modeling and Machine Learning", grade: "A" },
+        { code: "DSC 140B", name: "Representation Learning", grade: "A" },
+        { code: "DSC 180A", name: "Data Science Project I", grade: "A" },
+        { code: "DSC 180B", name: "Data Science Project II", grade: "A" },
+        { code: "DSC 190", name: "Topics in Data Science: Soft Skills", grade: "A+" },
+        { code: "DSC 261", name: "Responsible Data Science", grade: "A" }
+      ]
+    },
+    "Mathematics": {
+      color: "bg-green-500",
+      courses: [
+        { code: "MATH 18", name: "Linear Algebra", grade: "A+" },
+        { code: "MATH 20A", name: "Calculus for Science and Engineering (AP)", grade: "P" },
+        { code: "MATH 20B", name: "Calculus for Science and Engineering", grade: "A" },
+        { code: "MATH 20C", name: "Calculus and Analytic Geometry for Science and Engineering", grade: "A+" },
+        { code: "MATH 109", name: "Mathematical Reasoning", grade: "A" },
+        { code: "MATH 154", name: "Discrete Mathematics and Graph Theory", grade: "P" },
+        { code: "MATH 168A", name: "Topics in Applied Math-Computer Science: Random walks on graphs", grade: "P" },
+        { code: "MATH 170A", name: "Introduction to Numerical Analysis/Linear", grade: "P" },
+        { code: "MATH 183", name: "Statistical Methods", grade: "A" },
+        { code: "MATH 189", name: "Data Analysis and Inference", grade: "A+" }
+      ]
+    },
+    "Computer Science": {
+      color: "bg-purple-500",
+      courses: [
+        { code: "CSE 150A", name: "AI: Probabilistic Models", grade: "P" },
+        { code: "CSE 151A", name: "Introduction to Machine Learning", grade: "A" },
+        { code: "CSE 158R", name: "Recommender Systems & Web Mining", grade: "A+" }
+      ]
+    },
+    "Economics": {
+      color: "bg-red-500",
+      courses: [
+        { code: "ECON 1", name: "Principles of Microeconomics (AP)", grade: "P" },
+        { code: "ECON 2", name: "Market Imperfections & Policy", grade: "A+" },
+        { code: "ECON 3", name: "Principles of Macroeconomics", grade: "A+" },
+        { code: "ECON 120B", name: "Econometrics B", grade: "A" }
+      ]
+    },
+    "Other Courses": {
+      color: "bg-gray-500",
+      courses: [
+        { code: "COGS 9", name: "Introduction to Data Science", grade: "A+" },
+        { code: "COGS 108", name: "Data Science in Practice", grade: "A+" },
+        { code: "AWP 4A", name: "Analytical Writing A", grade: "P" },
+        { code: "AWP 4B", name: "Analytical Writing B", grade: "A" },
+        { code: "MCWP 40", name: "Critical Writing", grade: "A" },
+        { code: "MCWP 50", name: "Critical Writing", grade: "A+" },
+        { code: "MUS 1A", name: "Fundamentals of Music A", grade: "A+" },
+        { code: "MUS 1B", name: "Fundamentals of Music B", grade: "P" },
+        { code: "MUS 4", name: "Introduction to Western Music", grade: "P" },
+        { code: "POLI 30", name: "Political Inquiry", grade: "A" },
+        { code: "USP 1", name: "History of US Urban Communities", grade: "P" }
+      ]
+    }
+  };
+
+  return (
+    <PageTransition>
+      <div className="min-h-screen pt-16 bg-white dark:bg-gray-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+          {/* Achievements Section */}
+          <div className="mb-16">
+            <h2 className="text-3xl font-bold mb-8 text-gray-900 dark:text-white">Academic Achievements</h2>
+            <div className="grid md:grid-cols-3 gap-8">
+              {achievements.map((achievement, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1 }}
+                  className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow"
+                >
+                  <div className="flex items-center mb-4">
+                    {achievement.icon}
+                    <h3 className="ml-4 text-xl font-bold text-gray-900 dark:text-white">{achievement.title}</h3>
+                  </div>
+                  <p className="text-gray-600 dark:text-gray-300">{achievement.description}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+
+          {/* GPA Summary */}
+          <div className="mb-16">
+            <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700 rounded-xl p-8">
+              <div className="text-center">
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Academic Summary</h3>
+                <div className="grid md:grid-cols-3 gap-8">
+                  <div>
+                    <p className="text-3xl font-bold text-blue-600 dark:text-blue-400">4.0</p>
+                    <p className="text-gray-600 dark:text-gray-300">Cumulative GPA</p>
+                  </div>
+                  <div>
+                    <p className="text-3xl font-bold text-blue-600 dark:text-blue-400">185</p>
+                    <p className="text-gray-600 dark:text-gray-300">Total Units Completed</p>
+                  </div>
+                  <div>
+                    <p className="text-3xl font-bold text-blue-600 dark:text-blue-400">Summa Cum Laude</p>
+                    <p className="text-gray-600 dark:text-gray-300">Graduation Honor</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Course History by Department - Vertical Layout */}
+          <div>
+            <h2 className="text-3xl font-bold mb-8 text-gray-900 dark:text-white">Course History by Department</h2>
+            <div className="space-y-8">
+              {Object.entries(departmentCourses).map(([department, data], index) => (
+                <CourseCard
+                  key={department}
+                  department={department}
+                  courses={data.courses}
+                  departmentColor={data.color}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </PageTransition>
+  );
+};
+
+
+const App = () => {
+  return (
+    <HashRouter>
+      <ThemeProvider>
+        <AppContent />
+      </ThemeProvider>
+    </HashRouter>
+  );
+};
+// Add this new component after your existing components
+
+>>>>>>> 790ac6fcce775481f6863f9444b50c72d9186ea0
 const TestimonialCard = ({ quote, author, role, course, delay = 0 }) => (
   <motion.div
     initial={{ opacity: 0, y: 50, scale: 0.8 }}
