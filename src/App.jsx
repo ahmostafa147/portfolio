@@ -623,7 +623,7 @@ const AboutSection = () => (
             >
               <h3 className="text-xl font-bold mb-4 text-gray-900 dark:text-white">Leadership & Recognition</h3>
               <p className="text-gray-600 dark:text-gray-300">
-                I was selected to be the recipient of the prestigious <strong>Jeffrey L. Elman Award</strong> which is given to the student with academic achievements and significant contributions to the UCSD Data Science community. I graduated Summa Cum Laude with a perfect 4.0 GPA. My passion for knowledge sharing led me to tutor over 1000+ students across multiple courses, developing communication skills that translate well to cross-functional collaboration.
+                I was selected to be the recipient of the prestigious <strong>Jeffrey L. Elman Award</strong> which is given to the student with outstanding academic achievements and significant contributions to the UCSD Data Science community. I graduated Summa Cum Laude with a perfect 4.0 GPA. My passion for knowledge sharing led me to tutor over 1000+ students across multiple courses, developing communication skills that translate well to cross-functional collaboration.
               </p>
             </motion.div>
           </div>
@@ -719,7 +719,7 @@ const AcademicSection = () => {
   const achievements = [
     {
       title: "Jeffrey L. Elman Award",
-      description: "Selected as the one student out of 200+ graduating students to receive this prestigious award for outstanding academic achievement and research contributions in Data Science.",
+      description: "Selected as the one student out of 200+ graduating students to receive this prestigious award for outstanding academic achievement and contributions to the community in Data Science.",
       icon: <Award className="w-8 h-8 text-yellow-500" />,
     },
     {
